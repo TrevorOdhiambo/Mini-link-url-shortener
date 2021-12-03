@@ -11,8 +11,23 @@ const validateUrl = (link) => {
         '(\\#[-a-z\\d_]*)?$', 'i');
     re.test(link) ? shortenUrl(link) : errorMessage(link);
 };
-const shortenUrl = (link) => {
-    fetch('https://www.shareaholic.com/v2/share/shorten_link/').then(response => response.json()).then(data => console.log(data));
+const shortenUrl = async(link) => {
+    const token = 'iUhax5TtUXfyNvY88Qcwvdi81bWOI1Zc4oAVoG4YEnfpQJmY8bTinW37vemc'
+    const response = await fetch('https://api.tinyurl.com/create',
+        {
+            method : 'POST',
+            headers : {
+                'Authorization' : `Bearer ${token}`,
+                'Content-type' : 'application/json'
+            },
+            body : JSON.stringify({
+                "url": `${link}`,
+                "domain": "tiny.one"
+            })
+        }
+    )
+    const data = await response.json()
+    console.log(data)
 };
 const errorMessage = (link) => {
     const main = document.getElementById('main');
