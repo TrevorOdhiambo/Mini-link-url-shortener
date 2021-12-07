@@ -1,5 +1,4 @@
-// Import stylesheets
-import './style.css';
+
 
 const form = document.getElementById('form');
 const validateUrl = (link) => {
