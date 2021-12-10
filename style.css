@@ -159,7 +159,7 @@ input[type='text']{
 }
 input[type='submit']{
  position: absolute;
- right: 10%;
+ right: 7%;
  padding: 10px;
  border-radius: 5px;
  border:0;
