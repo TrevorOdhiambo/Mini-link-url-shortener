@@ -41,14 +41,20 @@ const shortenUrl = async(link) => {
     console.log(data)
 };
 const errorMessage = (link) => {
-    const main = document.getElementById('main');
-    const div = document.createElement('div');
-    div.classList.add('error');
-    const message = document.createElement('p');
+    const input = document.getElementById('url-input')
+    const result = document.querySelector('.result');
+    const message = document.querySelector('.message');
     message.classList.add('error-message');
-    message.textContent = `${link} is not a valid url`;
-    div.appendChild(message);
-    main.append(div);
+    message.value = `${link} is not a valid url`;
+    
+    
+    result.classList.add('show')
+    setTimeout(()=>{
+        result.classList.remove('show')
+        message.value=''
+    },2000)
+    
+   
 };
 form.addEventListener('submit', (e) => {
     e.preventDefault();

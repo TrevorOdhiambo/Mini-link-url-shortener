@@ -88,7 +88,7 @@ header{
     text-align: center;
     transition: 0.3s;
     box-shadow: 0 10 27px rgba(0,0,0,0.05);
-
+    z-index: 100;
   } 
   #nav-list.active{
     left: 0;
@@ -111,6 +111,7 @@ header{
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  position: relative;
 }
 .title{
   text-align: center;
@@ -142,9 +143,10 @@ header{
   border-radius: 15px;
   display: flex;
   align-items: center;
+
   
 }
-input[type='text']{
+#url-input{
   position: relative;
   width: 100%;
   padding: 10px;
@@ -167,4 +169,33 @@ input[type='submit']{
  background-color: orangered;
  color: white;
 cursor: pointer;
+}
+
+.result{
+  position: absolute;
+  width: 90%;
+  height: 100px;
+  background-color: rgb(9, 107, 107);
+  display: none;
+  transition: all 3s ease-in-out;
+ 
+}
+.result.show{
+  display: block;
+  bottom:-20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-message{
+  border:0;
+  border-bottom: 2px solid grey;
+  text-align: center;
+  background-color: inherit;
+  padding: 10px;
+  width: 60%;
+  color: rgb(207, 157, 157);
+  font-weight: bold;
+  font-size: 2rem;
 }
