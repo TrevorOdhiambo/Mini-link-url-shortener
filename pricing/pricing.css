@@ -1,0 +1,65 @@
+/* hero */
+.hero{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.hero h1{
+    font-size: 4rem;
+    color: orangered;
+}
+.hero p{
+    font-size: 1.6rem;
+    line-height: 3rem;;
+}
+
+/* plan section */
+.plan{
+    width: 100vw;
+    background-color: lightgray;
+}
+/* toggle switch */
+input[type="checkbox"]{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+label {
+    width: 75px;
+    height: 25px;
+    display:block;
+    background-color: #477a85;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 0 20px #477a8550;
+  }
+label::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #e8f5f7;
+    position: absolute;
+    border-radius: 70px;
+    top:50%;
+    transform: translateY(-50%);
+    left: 2px;
+    transition: 0.5s;
+  }
+  
+  input:checked + label:after {
+    top: 50%;
+   transform:translate(51px,-50%);
+  }
+  
+  input:checked + label {
+    background-color: rgb(228, 132, 97);
+  }
+/*   
+  label:active:after {
+    width: 160px;
+  } */

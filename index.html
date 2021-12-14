@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Artifika&family=Permanent+Marker&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@520&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="style.css">
@@ -30,13 +31,13 @@
           <a href="#" class="nav-link">Features</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Pricing</a>
+          <a href="./pricing/pricing.html" class="nav-link">Pricing</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Login</a>
+          <a href="#" class="nav-link btn-login">Login</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Signup</a>
+          <a href="#" class="nav-link btn-signup">Signup</a>
         </li>
         
       </ul>
@@ -48,24 +49,30 @@
       
       </nav>
   </header>
+  <section id="main">
+    <div class="hero-description">
+      <h1>Shorter urls, faster results</h1>
+      <p class="caption">A URL shortener that boost your online business <br> and grows your customer base</p>
+      <a href="./pricing/pricing.html" class='btn get-started'>Get started today</a>
+    </div>
+    <img class="hero-image" src="./images/Stuck at Home - Stats and Graphs.png" alt="">
 
-<section id="hero">
- 
-  <section class="title">
-    <h1>mini link</h1>
-    <p class="sub">Shorter urls, bigger results</p>
-    <p class="caption">A URL shortener that boost your online business and grows your customer base</p>
   </section>
-  <form id="form">
-    <input type="text" id="url-input" placeholder="Enter url here">
-    <input type="submit" value="Shorten url" class="btn">
-  </form>
+  <section class="url">
+    
+      <form id="form">
+        <input type="text" class="url-input-box" placeholder="Shorten your link">
+        <input type="submit" class="btn-shorten" value="Shorten">
+      </form>
+      <p class="tos">By clicking Shorten you are agreeing to mini link's Terms and Conditions</p>
+      <div class="results">
+        <!-- <div class="single-result">
+          <p class="result-link"></p>
+          <a href=""></a>
+        </div> -->
+      </div>
+  </section>
 
-  <div class="result">
-    <input type="text" class="message" disabled>
-  </div>
-  
-</section>
 <script src='index.js'></script>
 </body>
 </html>
